@@ -136,6 +136,8 @@ public class SupervisesController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setContentText("User is not found!");
+            alert.showAndWait();
+
         }
     }
 

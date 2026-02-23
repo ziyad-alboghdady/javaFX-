@@ -6,7 +6,7 @@ import java.sql.*;
 import java.util.Optional;
 
 public class AdviserCrudOperations {
-    static final String DB_URL = "jdbc:postgresql://localhost:5432/cr26";
+    static final String DB_URL = "jdbc:postgresql://localhost:5432/DIMS1";
     static final String USER = "postgres";
     static final String PASS = "0000";
 
@@ -14,7 +14,7 @@ public class AdviserCrudOperations {
         Adviser adviser = null;
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS)){
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM adviser WHERE id = " + id);
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM advisers WHERE id = " + id);
             while (resultSet.next()) {
                 adviser = new Adviser();
                 adviser.setId(resultSet.getInt("id"));
@@ -36,7 +36,7 @@ public class AdviserCrudOperations {
         int result =0;
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS)){
             Statement statement = connection.createStatement();
-            result =statement.executeUpdate("DELETE FROM adviser WHERE id = " + id);
+            result =statement.executeUpdate("DELETE FROM advisers WHERE id = " + id);
         }catch (Exception e){
             throw new RuntimeException();}
         return result;
@@ -47,7 +47,7 @@ public class AdviserCrudOperations {
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS)) {
             Statement statement = connection.createStatement();
             if(getAdviserById(adviser.getId()).isPresent()) {
-                String query = "UPDATE adviser SET " +
+                String query = "UPDATE advisers SET " +
                         "name =  \'" + adviser.getName() +"\', " +
                         "department = \'" + adviser.getDepartment() + "\' WHERE id = " + adviser.getId() + ";";
                 result = statement.executeUpdate(query);
@@ -67,7 +67,7 @@ public class AdviserCrudOperations {
             if(getAdviserById(adviser.getId()).isPresent()) {
                 result = -1;
             } else {
-                String query = "INSERT INTO adviser (id, name, department) VALUES (" + params + ");";
+                String query = "INSERT INTO advisers (id, name, department) VALUES (" + params + ");";
                 result = statement.executeUpdate(query);
             }
         } catch (Exception e) {
