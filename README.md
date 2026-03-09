@@ -1,141 +1,141 @@
-🎓 University Advising Management System
+# 🎓 University Advising Management System
 
-A JavaFX desktop application that manages university academic relationships such as Advisers, Studies, and Supervision.
-The system allows users to perform CRUD operations through a graphical interface connected to a SQL database.
+A **JavaFX desktop application** for managing academic relationships in a university environment.  
+The system allows users to manage **Advisers, Studies, and Supervision relationships** through a graphical interface connected to a **SQL database**.
 
-This project demonstrates building a Java desktop application using JavaFX, Maven, and MVC architecture.
+This project demonstrates the use of **Java, JavaFX, Maven, and MVC architecture** to build a structured desktop application.
 
-📖 Project Overview
+---
 
-The University Advising Management System is designed to help manage academic information related to advisers and students.
+## 📖 Project Overview
 
-The application provides an intuitive interface that allows users to:
+The **University Advising Management System** helps manage university academic data in an organized way.
 
-Add and manage advisers
+Users can:
 
-Manage student study records
+- Add and manage advisers  
+- Manage study records  
+- Manage supervision relationships  
+- Store and retrieve data from a database  
 
-Manage supervision relationships
+The application uses **JavaFX with FXML** for building the graphical interface and organizes the code using **controllers, data models, and database operations**.
 
-Store and retrieve information from a database
+---
 
-The project follows a structured approach separating controllers, database logic, and data models.
+## 🚀 Features
 
-🚀 Features
+- Manage **Advisers**
+- Manage **Studies**
+- Manage **Supervision relationships**
+- Perform **CRUD operations**
+- Interactive **JavaFX user interface**
+- Database integration
+- Organized project structure
 
-Manage Advisers
+---
 
-Manage Student Studies
+## 🛠 Technologies Used
 
-Manage Supervision relationships
+- **Java**
+- **JavaFX**
+- **FXML**
+- **Maven**
+- **SQL Database**
 
-Perform CRUD operations
+---
 
-Interactive JavaFX GUI
+## 📂 Project Structure
 
-Database integration with SQL
+### Source Code
 
-Organized project structure using MVC
-
-🛠 Technologies Used
-Technology	Purpose
-Java	Core programming language
-JavaFX	Graphical User Interface
-FXML	UI layout design
-Maven	Dependency management
-SQL	Database storage
-📂 Project Structure
 src/main/java/org/example/demo2
 
 Controller
- ├── MainController.java
- ├── AdvisersController.java
- ├── StudiesController.java
- └── SupervisesController.java
+- MainController.java
+- AdvisersController.java
+- StudiesController.java
+- SupervisesController.java
 
 db
- ├── AdviserCrudOperations.java
- ├── StudiesCrudOperations.java
- └── SupervisesCrudOperations.java
+- AdviserCrudOperations.java
+- StudiesCrudOperations.java
+- SupervisesCrudOperations.java
 
 dto
- ├── Adviser.java
- ├── Studies.java
- └── Supervises.java
+- Adviser.java
+- Studies.java
+- Supervises.java
 
-Launcher.java
+Launcher.java  
 Pro1Application.java
+
+### Resources
 
 FXML files are located in:
 
 src/main/resources/org/example/demo2
-🗄 Database Setup
 
-The repository contains a database script:
+---
+
+## 🗄 Database Setup
+
+The project includes a database script:
 
 DB.sql
-Setup steps
 
-Open your SQL database system.
+### Steps to set up the database
 
-Create a new database.
+1. Open your database system (MySQL / PostgreSQL / etc.)
+2. Create a new database
+3. Run the SQL script inside **DB.sql**
+4. Update the database connection settings if needed
 
-Run the DB.sql script.
+---
 
-Update the database connection settings if necessary.
+## ▶️ Running the Project
 
-▶️ Running the Project
-1️⃣ Clone the repository
+### 1. Clone the repository
+
 git clone https://github.com/yourusername/repository-name.git
-2️⃣ Open the project
 
-Open the project using:
+### 2. Open the project
 
-IntelliJ IDEA
+Open the project using an IDE such as:
 
-Eclipse
+- IntelliJ IDEA
+- Eclipse
+- VS Code
 
-VS Code
-
-3️⃣ Install dependencies
-
-Run:
+### 3. Install dependencies
 
 mvn clean install
-4️⃣ Run the application
 
-Run:
+### 4. Run the application
+
+Run one of these classes:
 
 Launcher.java
 
 or
 
 Pro1Application.java
-🎯 Learning Goals
+
+---
+
+## 🎯 Learning Objectives
 
 This project demonstrates:
 
-JavaFX desktop application development
+- JavaFX desktop application development  
+- MVC architecture in Java  
+- Database CRUD operations  
+- Java and SQL integration  
+- Maven project management  
 
-MVC architecture
 
-Database CRUD operations
+---
 
-Java and SQL integration
+## 📄 License
 
-Maven project structure
+This project is created for **educational and learning purposes**.
 
-👨‍💻 Author
-
-Ziyad Alboghdady
-Computer Science Student
-
-🔗 LinkedIn
-https://www.linkedin.com/in/ziyad-alboghdady-a50ab8247
-
-💻 GitHub
-https://github.com/ziyad-alboghdady
-
-📄 License
-
-This project is created for educational and learning purposes.
